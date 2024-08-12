@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Concert One", sans-serif;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    height: 100dvh;
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+main .boxmenu{
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+main .boxmenu > i{
+    cursor: pointer;
+    font-size: 30px;
+    color: #fe853f;
+    text-shadow: 0 0 5px #00000089;
+}
+
+main > img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boxgame{
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    padding: 10px;
+}
+
+.showscore{
+    text-align: center;
+    color: #fff;
+}
+
+.showscore > h1{
+    font-size: 60px;
+    -webkit-text-stroke: 1px #000000c6
+}
+
+.showscore > p{
+    font-size: 20px;
+    text-shadow: 0 0 5px #000000c6;
+}
+
+.capybara{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: anicapybara 2s infinite linear;
+    transform: translate(-50%,-30%);
+}
+
+.capybara > img{
+    width: 500px;
+    filter: drop-shadow(0 0 50px #000000b7);
+}
+
+
+
+
+.boxoption{
+    padding: 5px;
+    background-color: #00000081;
+    width: 300px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.boxoption > h1{
+    position: sticky;
+    pointer-events: none;
+    top: 0;
+    background-color: #df7a3b;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 5px;
+}
+
+.boxoption > div{
+    background-color: #9a9898;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.boxoption > div > h2{
+    pointer-events: none;
+}
+
+.boxoption > div > p{
+    pointer-events: none;
+}
+
+.boxoption > div > p:nth-of-type(2){
+    margin-top: 8px;
+    pointer-events: none;
+}
+
+
+
+
+.addaniclickcapybara{
+    animation: aniclickcapybara 0.1s linear !important;
+}
+
+.addaniscoreperclick{
+    animation: aniscoreperclick 0.8s linear forwards;
+}
+
+.addaniclickoption{
+    animation: aniclickoption 0.1s linear;
+}
+
+.addnewcapybara{
+    animation: aninewcapybara 0.2s linear forwards !important;
+}
+
+.aniloadcapybara{
+    animation: aniloadcapybara 0.2s linear forwards !important;
+}
+
+@keyframes anicapybara {
+    0%{
+        transform: translate(-50%,-30%) rotate(5deg);
+    }
+    50%{
+        transform: translate(-50%,-30%) rotate(-5deg);
+    }
+    100%{
+        transform: translate(-50%,-30%) rotate(5deg);
+    }
+}
+
+@keyframes aniclickcapybara{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(0.9,0.9);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+@keyframes aniscoreperclick{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+}
+
+@keyframes aniclickoption {
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(0.9,0.9);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+@keyframes aninewcapybara {
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(0.5,0.5);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+}
+
+@keyframes aniloadcapybara {
+    0%{
+        transform: scale(0,0);
+    }
+    50%{
+        transform: scale(0.5,0.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    main .boxmenu {
+        display: block;
+    }
+
+    .boxoption{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 300px;
+        z-index: 20;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .boxoption{
+        width: 200px;
+    }
+}
