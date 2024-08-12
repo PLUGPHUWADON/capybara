@@ -116,13 +116,13 @@ function resetScoreAndResetStypeOption() {
     allscore.innerHTML = showNumber(score);
     clickoption.forEach(e => {
         if (score >= parseInt(e.children[2].id)) {
-            // e.style.pointerEvents = "unset";
+            e.style.pointerEvents = "unset";
             e.style.cursor = "pointer";
             e.style.backgroundColor = "#fff";
             e.children[2].style.color = "#fac11f";
         }
         else{
-            // e.style.pointerEvents = "none";
+            e.style.pointerEvents = "none";
             e.style.backgroundColor = "#9a9898";
             e.children[2].style.color = "#000";
         }
@@ -260,9 +260,6 @@ clickoption.forEach(e => {
                 e.classList.remove("addaniclickoption");
             });
         }
-    });
-    e.addEventListener("click",() => {
-        //:)
     });
 });
 
