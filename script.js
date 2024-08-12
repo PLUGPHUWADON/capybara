@@ -261,6 +261,9 @@ clickoption.forEach(e => {
             });
         }
     });
+    e.addEventListener("click",() => {
+        //:)
+    });
 });
 
 //!
