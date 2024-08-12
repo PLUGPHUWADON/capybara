@@ -74,8 +74,8 @@ main > img{
     position: absolute;
     top: 50%;
     left: 50%;
+    translate: -50% -30%;
     animation: anicapybara 2s infinite linear;
-    transform: translate(-50%,-30%);
 }
 
 .capybara > img{
@@ -151,13 +151,13 @@ main > img{
 
 @keyframes anicapybara {
     0%{
-        transform: translate(-50%,-30%) rotate(5deg);
+        rotate: 5deg;
     }
     50%{
-        transform: translate(-50%,-30%) rotate(-5deg);
+        rotate: -5deg;
     }
     100%{
-        transform: translate(-50%,-30%) rotate(5deg);
+        rotate: 5deg;
     }
 }
 
